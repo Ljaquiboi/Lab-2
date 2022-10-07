@@ -100,7 +100,14 @@ Next team member should pull to download updates and continue from here.
 *Remove this text and add your answer here.*
 
 ```{r lineplot-3}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = year, y = `Percentage hire`, color = faculty_type)) +
+  geom_line(aes(group = faculty_type)) +
+  labs(x = "Year",
+    y = "Percentage Hire",
+    title = "Intructional staff enployment trends",
+    colour = "Faculty Type"
+  )
 ```
 
 
