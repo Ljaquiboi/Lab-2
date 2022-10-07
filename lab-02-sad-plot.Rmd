@@ -52,6 +52,7 @@ Yes there is 55 rows
 
 ```{r staff-long-inspect}
 # remove this comment and add your code here
+
 ```
 
 
@@ -64,16 +65,23 @@ Team member 3 should pull to download updates and begins here.
 
 ### Exercise 4
 
-*Remove this text and add your answer here.*
+You can't see any data.
 
 ```{r lineplot-1}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = year, y = `Percentage hire`, color = faculty_type)) +
+  geom_line(aes(group = faculty_type)) 
+
+
 ```
+
 
 
 ### Exercise 5
 
-*Remove this text and add your answer here.*
+The part-time faculty employment has increased.
+The full-time tenuere-track faculty and full-time tenured faculty employment trends have both decreased.
+The graduate student employees and the full-time non-tenure-track faculty employment trends have stayed the same-
 
 ```{r lineplot-2}
 # remove this comment and add your code here
